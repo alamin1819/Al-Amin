@@ -1,0 +1,427 @@
+/*
+ * Site stylesheet source (Tailwind CSS v4).
+ * Build:  npm run build   -> css/app.css (minified, only the classes the pages use)
+ * Watch:  npm run watch
+ */
+@import "tailwindcss" source(none);
+
+@source "../*.html";
+@source "../js/*.js";
+
+/* ---------------------------------------------------------------
+   Design tokens: dark slate surfaces + amber accent
+--------------------------------------------------------------- */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-bengali: "Noto Sans Bengali", "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-accent: var(--color-amber-400);
+  --color-accent-soft: var(--color-amber-300);
+  --color-accent-strong: var(--color-amber-500);
+}
+
+/* ---------------------------------------------------------------
+   Base
+--------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-slate-950 font-sans text-base leading-relaxed text-slate-300 antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply leading-tight text-slate-50;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  :focus-visible {
+    @apply rounded-sm outline-2 outline-offset-2 outline-amber-400;
+  }
+
+  ::selection {
+    @apply bg-amber-400 text-slate-950;
+  }
+
+  sub {
+    @apply text-[0.7em];
+  }
+
+  dialog::backdrop {
+    @apply bg-slate-950/90 backdrop-blur-sm;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Reusable components
+--------------------------------------------------------------- */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply bg-amber-400 text-slate-950 hover:bg-amber-300;
+  }
+  .btn-outline {
+    @apply border border-slate-600 text-slate-100 hover:border-amber-400 hover:text-amber-300;
+  }
+
+  /* Surfaces */
+  .card {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/20 sm:p-6;
+  }
+  .card-hover {
+    @apply transition duration-200 hover:border-amber-400/40 motion-safe:hover:-translate-y-0.5;
+  }
+
+  /* Section title: small eyebrow + big heading + faint watermark word */
+  .section-title {
+    @apply relative isolate mx-auto mb-10 max-w-3xl text-center sm:mb-14;
+  }
+  .section-title h2 {
+    @apply text-3xl font-bold sm:text-4xl lg:text-5xl;
+  }
+  .section-title p {
+    @apply mt-4 text-slate-400;
+  }
+  /* Decorative word drawn from data-text, so it is not part of the page text */
+  .watermark {
+    @apply pointer-events-none absolute inset-x-0 -top-6 -z-10 truncate text-center text-6xl font-black text-white/[0.04] select-none sm:-top-8 sm:text-7xl lg:-top-10 lg:text-8xl;
+  }
+  .watermark::before {
+    content: attr(data-text);
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.25em] text-amber-400 uppercase;
+  }
+
+  /* Heading with a line on each side, used inside columns */
+  .rule-heading {
+    @apply mb-6 flex items-center gap-4 text-xl font-bold text-slate-50 sm:text-2xl;
+  }
+  .rule-heading::before,
+  .rule-heading::after {
+    content: "";
+    @apply h-px flex-1 bg-gradient-to-r from-transparent to-amber-400/60;
+  }
+  .rule-heading::after {
+    @apply bg-gradient-to-l;
+  }
+
+  /* Left-aligned heading with underline, used for Work Experience / Education */
+  .sub-heading {
+    @apply mb-6 border-b border-slate-800 pb-3 text-2xl font-semibold text-slate-50 sm:text-3xl;
+  }
+
+  .num-badge {
+    @apply grid size-9 shrink-0 place-items-center rounded-lg bg-amber-400/10 text-xs font-bold text-amber-300 ring-1 ring-amber-400/30;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-2.5 py-0.5 text-xs font-medium text-slate-300;
+  }
+
+  /* Emphasis inside body copy */
+  .highlight strong,
+  .highlight b {
+    @apply font-semibold text-amber-300;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-amber-300;
+  }
+  .nav-link.is-active {
+    @apply text-amber-400;
+  }
+
+  .site-nav {
+    @apply transition-colors duration-300;
+  }
+  .site-nav.is-solid {
+    @apply border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md;
+  }
+
+  .icon-btn {
+    @apply grid size-11 place-items-center rounded-full border border-slate-700 text-slate-300 transition-colors hover:border-amber-400 hover:text-amber-300;
+  }
+
+  /* Numbered publication list: badges come from a CSS counter */
+  .paper-list {
+    counter-reset: paper;
+  }
+  .paper-list > li:not(.paper-unnumbered) {
+    counter-increment: paper;
+    @apply relative pl-16 sm:pl-[4.5rem];
+  }
+  .paper-list > li:not(.paper-unnumbered)::before {
+    content: counter(paper, decimal-leading-zero);
+    @apply absolute top-5 left-4 grid size-9 place-items-center rounded-lg bg-amber-400/10 text-xs font-bold text-amber-300 ring-1 ring-amber-400/30 sm:top-6 sm:left-5;
+  }
+
+  /* About photo: two counter-rotating arcs + pulsing glow */
+  .profile-ring {
+    @apply pointer-events-none absolute rounded-full border-solid border-transparent;
+  }
+  .profile-ring-a {
+    @apply inset-0 border-[3px] border-t-amber-400 border-r-sky-500 border-b-sky-500;
+    animation: profile-spin 5s linear infinite;
+  }
+  .profile-ring-b {
+    @apply -inset-2 border-2 border-t-amber-400/80 border-l-sky-500/80;
+    animation: profile-spin 7s linear infinite reverse;
+  }
+  .profile-glow {
+    @apply pointer-events-none absolute inset-3 rounded-full bg-sky-500/50 blur-xl;
+    animation: profile-pulse 3s ease-in-out infinite;
+  }
+
+  /* Long-form article (si.html) */
+  .prose-article > section {
+    @apply mb-16 sm:mb-20;
+  }
+  .prose-article h2 {
+    @apply mb-5 text-2xl leading-snug font-bold text-slate-50 sm:text-3xl lg:text-4xl;
+  }
+  .prose-article h3 {
+    @apply mt-8 mb-2 text-xl font-semibold text-amber-300;
+  }
+  .prose-article p {
+    @apply mb-4 text-base leading-8 text-slate-300 sm:text-[1.05rem];
+  }
+  .prose-article strong {
+    @apply font-semibold text-slate-50;
+  }
+  .prose-article .gold {
+    @apply font-semibold text-amber-300;
+  }
+  .prose-article .card h3 {
+    @apply mt-0;
+  }
+  .prose-article .card p {
+    @apply mb-0 text-sm leading-7;
+  }
+  .article-kicker {
+    @apply mb-2 font-sans text-xs font-bold tracking-[0.2em] text-amber-500 uppercase;
+  }
+  .statement {
+    @apply my-12 border-y border-amber-400/20 px-2 py-10 text-center;
+  }
+  .prose-article .statement h2 {
+    @apply mb-3 text-3xl text-amber-400 sm:text-5xl;
+  }
+  .prose-article .statement p {
+    @apply mx-auto mb-0 max-w-2xl;
+  }
+  .quote {
+    @apply my-8 rounded-r-2xl border-l-4 border-amber-400 bg-amber-400/5 p-5 sm:p-6;
+  }
+  .prose-article .quote p {
+    @apply mb-2 text-lg text-slate-100 italic;
+  }
+  .quote > span {
+    @apply text-sm text-amber-300;
+  }
+  .callout {
+    @apply my-8 rounded-2xl border border-amber-400/30 bg-amber-400/[0.06] p-5 sm:p-6;
+  }
+  .callout-title {
+    @apply mb-2 text-lg font-bold text-amber-300;
+  }
+  .prose-article .callout p {
+    @apply mb-0;
+  }
+  .english-box {
+    @apply mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 font-sans sm:p-6;
+  }
+  .english-label {
+    @apply mb-2 text-xs font-bold tracking-[0.2em] text-amber-400;
+  }
+  .prose-article .english-box p {
+    @apply mb-0 text-[0.95rem] leading-7 text-slate-400;
+  }
+
+  /* Hero buttons: glowing outline with a bright line orbiting outside the button */
+  .btn-glow {
+    @apply relative isolate;
+  }
+  .btn-glow::before,
+  .btn-glow::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    background: conic-gradient(
+      from var(--btn-angle),
+      rgb(56 189 248 / 0.25) 0 55%,
+      var(--color-sky-400) 72%,
+      #fff 82%,
+      var(--color-amber-400) 92%,
+      rgb(56 189 248 / 0.25)
+    );
+    /* show only a ring: full box minus its content box */
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    animation: btn-orbit 3s linear infinite;
+    animation-delay: var(--orbit-delay, 0s);
+  }
+  .btn-glow::before {
+    inset: -4px;
+    padding: 2px;
+  }
+  .btn-glow::after {
+    inset: -10px;
+    padding: 8px;
+    filter: blur(6px);
+    opacity: 0.85;
+  }
+
+  /* Site-wide scientific background, fixed behind every page (js/science-bg.js draws the canvases) */
+  .science-bg {
+    @apply pointer-events-none fixed inset-0 -z-10 overflow-hidden select-none;
+    background: linear-gradient(to bottom, #0b1a33 0%, #071226 50%, var(--color-slate-950) 100%);
+  }
+  .science-bg canvas {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-[1500ms];
+  }
+  .science-bg.is-ready canvas {
+    @apply opacity-100;
+  }
+  .science-bg canvas {
+    will-change: transform;
+  }
+  .science-bg-nebula {
+    @apply absolute rounded-full;
+    will-change: transform;
+  }
+  .science-bg-nebula-a {
+    top: -15%;
+    left: -10%;
+    width: 60vmax;
+    height: 60vmax;
+    background: radial-gradient(closest-side, rgb(99 102 241 / 0.1), transparent);
+    animation: nebula-drift 48s ease-in-out infinite alternate;
+  }
+  .science-bg-nebula-b {
+    right: -20%;
+    bottom: -25%;
+    width: 55vmax;
+    height: 55vmax;
+    background: radial-gradient(closest-side, rgb(20 184 166 / 0.07), transparent);
+    animation: nebula-drift 62s ease-in-out infinite alternate-reverse;
+  }
+
+  /* Arrow that keeps nudging to the right */
+  .arrow-nudge {
+    animation: arrow-nudge 1.2s ease-in-out infinite;
+  }
+
+  /* Typing effect caret */
+  .typing-caret::after {
+    content: "";
+    @apply ml-1 inline-block h-[1em] w-0.5 translate-y-[0.15em] bg-amber-400;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .typing-caret::after {
+      animation: caret-blink 1s steps(1) infinite;
+    }
+  }
+
+  /* Scroll reveal: only hides content when JS is running and motion is allowed */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal {
+      @apply translate-y-4 opacity-0 transition duration-700 ease-out;
+    }
+    .js .reveal.is-visible {
+      @apply translate-y-0 opacity-100;
+    }
+  }
+}
+
+@keyframes profile-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes profile-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@property --btn-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes btn-orbit {
+  to {
+    --btn-angle: 360deg;
+  }
+}
+
+@keyframes nebula-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(6%, 4%, 0) scale(1.08);
+  }
+}
+
+@keyframes arrow-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

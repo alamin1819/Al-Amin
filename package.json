@@ -1,0 +1,14 @@
+{
+  "name": "al-amin-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal portfolio of Md. Al-Amin (static HTML + Tailwind CSS)",
+  "scripts": {
+    "build": "tailwindcss -i src/app.css -o css/app.css --minify",
+    "watch": "tailwindcss -i src/app.css -o css/app.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  }
+}

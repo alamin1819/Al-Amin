@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Al-Amin Portfolio</title>
+  <meta name="description" content="Md. Al-Amin, Lecturer in the Department of CSE at Asian University of Bangladesh. Research in solar energy, photovoltaic cells, materials science, energy harvesting and machine learning.">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="preload" as="image" href="images/web/til_blue-900.webp" imagesrcset="images/web/til_blue-600.webp 600w, images/web/til_blue-900.webp 900w" imagesizes="(min-width: 768px) 384px, 256px" fetchpriority="high">
+  <link rel="stylesheet" href="css/app.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- Site-wide scientific background (decorative, behind all content) -->
+  <div class="science-bg" data-science-bg aria-hidden="true">
+    <div class="science-bg-nebula science-bg-nebula-a"></div>
+    <div class="science-bg-nebula science-bg-nebula-b"></div>
+    <canvas data-science-scene></canvas>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-nav fixed inset-x-0 top-0 z-50" data-nav>
+    <nav class="container-page relative flex h-16 items-center justify-between" aria-label="Main">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight text-white hover:text-amber-300">Md. Al-Amin</a>
+
+      <button type="button" class="btn btn-outline min-h-10 px-4 lg:hidden" aria-controls="nav-menu" aria-expanded="false" data-nav-toggle>
+        <svg data-icon-open class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg data-icon-close class="hidden size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        Menu
+      </button>
+
+      <ul id="nav-menu" class="absolute inset-x-0 top-full hidden flex-col gap-1 rounded-b-2xl border border-t-0 border-slate-800 bg-slate-950/95 p-3 shadow-xl backdrop-blur-md lg:static lg:flex lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none" data-nav-menu>
+        <li><a href="#home-section" class="nav-link">Home</a></li>
+        <li><a href="#about-section" class="nav-link">About</a></li>
+        <li><a href="#resume-section" class="nav-link">Experience</a></li>
+        <li><a href="#project-section" class="nav-link">Achievements</a></li>
+        <li><a href="Personal.html" class="nav-link" target="_blank" rel="noopener">Personal Information</a></li>
+        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section id="home-section" class="relative isolate overflow-hidden pt-16">
+      <div aria-hidden="true" class="absolute top-1/4 right-[-10%] -z-10 size-[34rem] rounded-full bg-blue-600/20 blur-3xl md:top-1/3"></div>
+      <div aria-hidden="true" class="absolute inset-x-0 top-16 -z-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+      <div class="container-page grid min-h-[calc(100svh-4rem)] items-center gap-10 py-12 md:grid-cols-12 md:py-16">
+        <div class="md:col-span-7">
+          <p class="text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">Hello!</p>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            I'm <span class="text-amber-400">Md. Al-Amin</span>
+          </h1>
+
+          <p class="mt-5 min-h-[1.5em] text-2xl font-semibold text-sky-300 sm:text-3xl">
+            <span class="sr-only">Engineer, Writer, Teacher, Researcher</span>
+            <span aria-hidden="true" class="typing-caret" data-typing='["Engineer", "Writer", "Teacher", "Researcher"]'>Engineer</span>
+          </p>
+
+          <p class="mt-6 max-w-xl text-lg text-slate-300 sm:text-xl">
+            Lecturer, Dept. of CSE <br> Asian University of Bangladesh Ashulia, Dhaka.
+          </p>
+
+          <p class="mt-8 flex flex-wrap gap-5">
+            <a href="https://www.facebook.com/alamin1910" class="btn btn-primary btn-glow">Facebook</a>
+            <a href="https://www.linkedin.com/in/alamin1910?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="btn btn-outline btn-glow [--orbit-delay:-1s]">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" class="btn btn-outline btn-glow [--orbit-delay:-2s]">Google Scholar</a>
+          </p>
+        </div>
+
+        <div class="order-first md:order-last md:col-span-5">
+          <div class="relative mx-auto max-w-[16rem] sm:max-w-xs md:max-w-sm">
+            <div aria-hidden="true" class="absolute -inset-3 -z-10 rounded-[2rem] border border-white/10 bg-gradient-to-b from-blue-400/10 to-white/[0.02] shadow-[0_30px_80px_-20px_rgba(37,99,235,0.45)]"></div>
+            <img src="images/web/til_blue-900.webp" srcset="images/web/til_blue-600.webp 600w, images/web/til_blue-900.webp 900w" sizes="(min-width: 768px) 384px, 256px" width="900" height="1200" alt="Portrait of Md. Al-Amin" fetchpriority="high" class="aspect-[3/4] w-full rounded-3xl object-cover shadow-2xl shadow-black/50 ring-1 ring-white/15">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about-section" class="section">
+      <div class="container-page grid gap-12 lg:grid-cols-12 lg:gap-10">
+
+        <!-- LEFT COLUMN -->
+        <div class="space-y-14 lg:col-span-5">
+
+          <!-- Profile -->
+          <div class="reveal text-center">
+            <div class="relative mx-auto size-48 sm:size-56">
+              <div aria-hidden="true" class="profile-glow"></div>
+              <div aria-hidden="true" class="profile-ring profile-ring-a"></div>
+              <div aria-hidden="true" class="profile-ring profile-ring-b"></div>
+              <img src="images/web/S8-480.webp" srcset="images/web/S8-320.webp 320w, images/web/S8-480.webp 480w" sizes="200px" width="480" height="721" alt="Md. Al-Amin" loading="lazy" decoding="async" class="absolute inset-3 size-[calc(100%-1.5rem)] rounded-full border-4 border-slate-950 bg-slate-100 object-cover object-top ring-2 ring-amber-400/60">
+            </div>
+
+            <div class="card mt-6 text-sm">
+              <p class="text-lg font-semibold text-amber-400">Md. Al-Amin</p>
+              <p class="mt-1">
+                <b class="text-slate-100">Research Interests:</b>
+                <span>Solar Energy &amp; Photovoltaic Cells | Materials Science | Energy Harvesting | Machine Learning (ML)</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- About Me -->
+          <div class="reveal">
+            <div class="relative isolate">
+              <span class="watermark text-left" aria-hidden="true" data-text="About"></span>
+              <h2 class="rule-heading text-amber-400">About Me</h2>
+            </div>
+            <div class="highlight space-y-4 text-justify hyphens-auto text-slate-300">
+              <p>
+                I am passionate about continuously learning new ideas, concepts, and emerging technologies in engineering
+                and sharing my knowledge with students in simple, engaging, and practical ways. I enjoy making learning
+                enjoyable by connecting theoretical concepts with real-life examples and encouraging students to understand
+                not only what they learn, but also why and how it can be applied.
+              </p>
+              <p>
+                Alongside teaching, I am actively exploring research in energy production and sustainable energy technologies,
+                with the goal of developing knowledge and solutions that can make people’s lives easier and contribute
+                positively to society. Through continuous learning, teaching, research, and innovation, I aspire to create
+                meaningful contributions both nationally and internationally.
+              </p>
+              <p>
+                Ultimately, my vision is to use my knowledge, skills, and work to serve humanity and contribute to the
+                well-being and development of the <b>global people’s.</b> I believe that continuous learning, purposeful work,
+                and knowledge-sharing are essential pathways toward achieving this vision.
+              </p>
+            </div> 
+          </div>
+
+          <!-- Awards & Achievements -->
+          <section id="achievements" aria-labelledby="achievements-title">
+            <h2 id="achievements-title" class="rule-heading">Awards &amp; Achievements</h2>
+            <ol class="highlight space-y-4 text-justify hyphens-auto">
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">01</span>
+                <p>
+                  <strong>Best Poster Presentation Award</strong> — International Conference on Electronics and
+                  Informatics Society-2026, organized by <strong>Bangladesh Electronics and Informatics Society.</strong>
+                  <span class="text-sm text-slate-400">(May 2026)</span>
+                </p>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">02</span>
+                <p>I was awarded the prestigious <strong>JKKNIU Merit Scholarship</strong> during my entire undergraduate program.</p>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">03</span>
+                <p>I was selected for the prestigious <strong>Dean’s Award</strong> in recognition of my outstanding academic performance in the fourth year.</p>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">04</span>
+                <p>
+                  <strong>1st Runner-Up</strong> — Project Showcase Competition for the project <em>“Home Automation System”</em>,
+                  organized by the Department of EEE, Jatiya Kabi Kazi Nazrul Islam University.
+                  <span class="text-sm text-slate-400">(October 2023)</span>
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Extra-Curricular Activities -->
+          <section id="extra-curricular" aria-labelledby="eca-title">
+            <h2 id="eca-title" class="rule-heading">Extra-Curricular Activities</h2>
+            <div class="space-y-4">
+
+              <article class="card card-hover reveal">
+                <h3 class="text-lg font-semibold">EEE Club-JKKNIU</h3>
+                <p class="mt-1 text-sm font-medium text-amber-300">Founding Vice-President &amp; Promoted President</p>
+                <p class="mt-2"><span class="chip">October 2022 – February 2025</span></p>
+                <ul class="highlight mt-4 list-disc space-y-2 pl-5 text-sm marker:text-amber-400">
+                  <li>Played an important role in founding <strong>EEE Club-JKKNIU.</strong></li>
+                  <li>Organized a programming and circuit solving competition, <strong>“Spark Hunt 1.0 &amp; Spark Hunt 2.0.”</strong> In these competitions, <strong>58 students</strong> from different sessions actively participated.</li>
+                  <li>Acted as an organizer of a seminar on <strong>“Empowering Electricity: Power Generation.”</strong></li>
+                  <li>Organized two workshops on project making. Attended by <strong>70+ students.</strong></li>
+                  <li>Organized a workshop on <strong>Line Following Boot Camp (LFR),</strong> where <strong>40+ students</strong> attended.</li>
+                  <li>Organized <strong>6+ webinars</strong> on different topics, including <strong>Career, Research, Scholarship for Higher Studies, Corporate Life, CV Writing, and the Importance of LinkedIn.</strong> More than <strong>370 students</strong> participated.</li>
+                </ul>
+              </article>
+
+              <article class="card card-hover reveal">
+                <h3 class="text-lg font-semibold">Jatiya Kabi Kazi Nazrul Islam University Research Society</h3>
+                <p class="mt-2 flex flex-wrap items-center gap-2 text-sm"><span class="font-medium text-amber-300">General Member</span> <span class="chip">September 2022 – September 2024</span></p>
+              </article>
+
+              <article class="card card-hover reveal">
+                <h3 class="text-lg font-semibold">Jatiya Kabi Kazi Nazrul Islam University Skill Development Club (SDC)</h3>
+                <p class="mt-2 flex flex-wrap items-center gap-2 text-sm"><span class="font-medium text-amber-300">General Member</span> <span class="chip">February 2020 – February 2021</span></p>
+              </article>
+
+              <article class="card card-hover reveal">
+                <h3 class="text-lg font-semibold">Byapon Youth Science Magazine</h3>
+                <p class="mt-2 flex flex-wrap items-center gap-2 text-sm"><span class="font-medium text-amber-300">Writer</span> <span class="chip">April 2026 – Present </span></p>
+              </article>
+
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="space-y-14 lg:col-span-7">
+
+          <!-- Skills & Interests -->
+          <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title" class="rule-heading">Skills &amp; Interests</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">01</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Soft Skills</h3>
+                  <p class="mt-1 text-sm">Teamwork, Strong Leadership, Negotiation, Communication, Content Writing, Public Speaking.</p>
+                </div>
+              </article>
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">02</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Technical Skills</h3>
+                  <p class="mt-1 text-sm">Mendeley Desktop, Zotero, MS Office 365, Google Workplace, Basic Graphics Design (Canva Pro) &amp; Video Editing (CapCut).</p>
+                </div>
+              </article>
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">03</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Simulation</h3>
+                  <p class="mt-1 text-sm">MATLAB, LTspice, Proteus, SCAPS-1D &amp; Origin.</p>
+                </div>
+              </article>
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">04</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Programming Languages</h3>
+                  <p class="mt-1 text-sm">C – Java – HTML – CSS – JavaScript – PHP (Basic)</p>
+                </div>
+              </article>
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">05</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Interests &amp; Hobbies</h3>
+                  <p class="mt-1 text-sm">Social Work – Teaching – Volunteering – Networking – Exploring New Things – Leadership – Traveling.</p>
+                </div>
+              </article> 
+              <article class="card card-hover reveal flex gap-4">
+                <span class="num-badge">06</span>
+                <div>
+                  <h3 class="font-semibold text-amber-300">Languages</h3>
+                  <p class="mt-1 text-sm"><b class="text-slate-100">Bangla</b> (Native), <b class="text-slate-100">English</b> (Intermediate), <b class="text-slate-100">Arabic</b> (Basic)</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Leadership & Activities -->
+          <section id="leadership" aria-labelledby="leadership-title">
+            <h2 id="leadership-title" class="rule-heading">Leadership &amp; Activities</h2>
+            <ol class="highlight space-y-4">
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">01</span>
+                <div>
+                  <h3 class="font-semibold">Math Olympiad 2025 — Nazrul Science Club</h3>
+                  <p class="mt-2 text-sm">Organized the <strong>Math Olympiad 2025</strong>, evaluating students’ mathematical problem-solving skills and selecting the <strong>Top 100 participants</strong> from <strong>13 schools</strong> across Trishal Upazila.</p>
+                </div>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">02</span>
+                <div>
+                  <h3 class="font-semibold">Dedicated Volunteer — Research Fair 2023, Jatiya Kabi Kazi Nazrul Islam University</h3>
+                  <p class="mt-2 text-sm">Contributed to the successful organization of the <strong>Research Fair 2023</strong>, which was attended by approximately <strong>200 teachers</strong> and <strong>2,000+ students</strong>.</p>
+                  <p class="mt-3"><span class="chip">June 2023</span></p>
+                </div>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">03</span>
+                <div>
+                  <h3 class="font-semibold">Dedicated Volunteer — Career Development Program: “Learning and Earning”</h3>
+                  <p class="mt-2 text-sm">Contributed to the <strong>Career Development Program: “Learning and Earning”</strong>, organized by the <strong>ICT Division, Mymensingh District</strong>, which was attended by <strong>650+ university students</strong>.</p>
+                  <p class="mt-3"><span class="chip">October 2023</span></p>
+                </div>
+              </li>
+              <li class="card card-hover reveal flex gap-4">
+                <span class="num-badge">04</span>
+                <div>
+                  <h3 class="font-semibold">Program Organizer — Seminar on Research Projects: Fiscal Year 2023</h3>
+                  <p class="mt-2 text-sm">Organized and coordinated the seminar, facilitating the participation of <strong>300+ teachers and students</strong>.</p>
+                  <p class="mt-3"><span class="chip">October 2023</span></p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Research and Publications -->
+          <section id="research" aria-labelledby="research-title">
+            <div class="relative isolate">
+              <span class="watermark text-left" aria-hidden="true" data-text="Research"></span>
+              <h2 id="research-title" class="rule-heading">Research and Publications</h2>
+            </div>
+            <ol class="paper-list space-y-3 text-justify hyphens-auto text-sm leading-relaxed [&_.journal]:font-semibold [&_.journal]:text-slate-100 [&_.scopus]:font-medium [&_.scopus]:text-amber-300 [&_.doi]:break-all [&_.doi]:text-slate-400">
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                Md. Al-Amin, et al. "Numerical optimization of Rb<sub>2</sub>AuScBr<sub>6</sub> and Rb<sub>2</sub>AuScCl<sub>6</sub>-based
+                lead-free perovskite solar cells: device engineering and performance mapping."
+                <span class="journal">RSC Advances</span> 15.53 (2025): 45309-45330.
+                <span class="scopus">(Scopus index Q1 journal, IF: 6.1)</span>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                S. Tanvir, R. M., Tanvir, M. Al-Amin, A. Rayhan, &amp; S. Mahmud, “Computational Analysis of Hydrogen Storage and
+                Physical Behavior of Al, Ga, and In-Based Copper Hydrides.”
+                <span class="journal">Computational Condensed Matter</span>, e01175.
+                <span class="scopus">(Scopus index Q2 journal, IF: 3.9)</span>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                Tanvir, M. Al-Amin, M. Sheikh, S., Rayhan, A., &amp; S. Mahmud, “Integrated DFT and SCAPS-1D analysis of
+                Tl<sub>2</sub>AgAsX<sub>6</sub> (X = Cl, I) double perovskites for advanced energy-harvesting devices”.
+                <span class="journal">Next Materials</span>, 12, 102081 (2026).
+                <span class="scopus">(Scopus index Q1 journal, IF: 3.4)</span>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                Partha Podder, JK Sharma, M Al-Amin et al. "DFT and AIMD predictions of Li<sub>2</sub>XBH<sub>6</sub>
+                (X = Li, Na, K) double perovskites for efficient hydrogen storage and photocatalytic applications."
+                <span class="journal">Materials Advances</span>, DOI: <span class="doi">10.1039/D6MA00292G</span>, (2026).
+                <span class="scopus">(Scopus index Q1 journal, IF: 5.2)</span>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                Tanvir, R. M., Al-Amin, M., Podder, P., Simanto, S. R., Billah, W., Ahmed, U., ... &amp; Mahmud, S. (2026).
+                Harnessing NaXH<sub>3</sub> (X = Ga, In) Perovskites for Hydrogen Storage: AIMD Stability and Comprehensive DFT Insights.
+                <span class="journal">Computational Condensed Matter</span>, e01393.
+                <span class="scopus">(Scopus indexed; JCR Q2; IF: 4.0)</span>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                M. M. Islam, M. Al-Amin, S. Chakandon, A. Haque, Md. Al-Asgar and M. Ali Asgar, "Numerical Analysis of
+                CH<sub>3</sub>NH<sub>3</sub>SnI<sub>3</sub>-based Perovskite Solar Cell for three HTLs,”
+                <span class="journal">International Conference on Electrical, Computer and Communication Engineering (ECCE)</span>,
+                Chittagong, Bangladesh, 2025, pp. 1-6, doi: <span class="doi">10.1109/ECCE64754.2025.11013539</span>.
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                Md. Al-Amin, A. Haque, S. Mahmud, “Modeling and Device Engineering of
+                Rb<sub>2</sub>AuScBr<sub>6</sub>/Rb<sub>2</sub>AuScCl<sub>6</sub> Lead-Free Perovskite Solar Cell,” Published at the
+                <strong class="text-slate-100">International Conference on Electronics and Informatics 2026 (ICEI2026)</strong>, Atomic Energy Centre,
+                Dhaka, Bangladesh; 07-08 May 2026, Organized by the Bangladesh Electronics and Informatics Society.
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-amber-400/70">
+                M. M. Islam, Md. Al-Amin, S. Mahmud, “Achieving 35.39% Efficiency in Perovskite Solar Cells via Dual Absorber
+                Layer Integration: A SCAPS-1D Simulation Study”, Published at the
+                <strong class="text-slate-100">International Conference on Electronics and Informatics 2026 (ICEI2026)</strong>, Atomic Energy Centre,
+                Dhaka, Bangladesh; 07-08 May 2026, Organized by the Bangladesh Electronics and Informatics Society.
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-slate-600">
+                Title: "Exploring NaXH<sub>3</sub> (X = Ga, In) Perovskites for Hydrogen Storage: Structural, AIMD stability,
+                Mechanical, Electronic, and Optical Insights from DFT." Under Review at
+                <span class="journal">Journal of Surfaces and Interfaces</span>.
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-slate-600">
+                Title: “First-Principles Investigation of the Structural and Physical Characteristics of Ternary Hydride Perovskites
+                XIrH<sub>3</sub> (X = Li, Na, K, and Rb) for H<sub>2</sub>-based energy system.” Under Review at
+                <span class="journal">Journal of Physica B</span>.
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="card card-hover reveal border-l-4 border-l-slate-600">
+                Title: “Machine Learning Assisted Performance Optimization of Lead-Free Cs<sub>2</sub>AuScX<sub>6</sub>
+                (X = Cl, Br, I) Double Perovskite Solar Cells Using SCAPS-1D”
+                <strong class="text-slate-100">Ongoing work.</strong>
+                <a href="https://scholar.google.com/citations?user=3I8wRV0AAAAJ&amp;hl=en" target="_blank" rel="noopener" class="mt-3 flex w-fit items-center gap-1.5 text-xs font-semibold text-sky-300 hover:text-sky-200"><svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>
+              </li>
+              <li class="paper-unnumbered card card-hover reveal border-l-4 border-l-slate-600">
+                <strong class="text-slate-100">Academic Thesis Title:</strong>
+                “Simulation of the commercial Solar Photovoltaic (PV) System by SCAPS-1D.”
+              </li>
+            </ol>
+          </section>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= EXPERIENCE & EDUCATION ================= -->
+    <section id="resume-section" class="section border-t border-slate-900">
+      <div class="container-page">
+        <div class="section-title">
+          <span class="watermark" aria-hidden="true" data-text="Experience"></span>
+          <h2>Teaching Experience</h2>
+          <p class="text-lg font-medium text-amber-300">More than 6 years of teaching experience, having taught and mentored over 12,000 students in ICT, Chemistry, and Science related subjects</p>
+        </div>
+
+        <h3 class="sub-heading text-center">Work Experience</h3>
+        <div class="grid gap-5 text-center md:grid-cols-2">
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">April 2026 — Present</p>
+            <h4 class="mt-2 text-xl font-semibold">Lecturer, Department of CSE</h4>
+            <p class="mt-2 text-sm text-slate-400">Asian University of Bangladesh (AUB), <br> Ashulia, Dhaka-1341</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">July 2026 — Present</p>
+            <h4 class="mt-2 text-xl font-semibold">Research Officer (Part-Time)</h4>
+            <p class="mt-2 text-sm text-slate-400">Merit Care Academy and Publications <br> Purana Palton, Dhaka-1000</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">January 2025 — March 2026</p>
+            <h4 class="mt-2 text-xl font-semibold">ICT Lecturer</h4>
+            <p class="mt-2 text-sm text-slate-400">Islami Academy School and College, Mymensingh</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">November 2019 — December 2025</p>
+            <h4 class="mt-2 text-xl font-semibold">ICT and Chemistry Lecturer</h4>
+            <p class="mt-2 text-sm text-slate-400">Agni-Bina and Focus University Admission Coaching, Mymensingh</p>
+          </article>
+        </div>
+
+        <h3 class="sub-heading mt-16 text-center">Education</h3>
+        <div class="grid gap-5 text-center md:grid-cols-2">
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2024-Present</p>
+            <h4 class="mt-2 text-xl font-semibold">M.Sc. in Electrical and Electronic Engineering (EEE)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Dhaka University of Engineering & Technology, Gazipur, Gazipur-1707, Bangladesh.</p>
+            <p class="mt-3 text-sm text-slate-400">CGPA: 3.81</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2018-2022</p>
+            <h4 class="mt-2 text-xl font-semibold">B.Sc. in Electrical and Electronic Engineering (EEE)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Jatiya Kabi Kazi Nazrul Islam University, Trishal, Mymensingh</p>
+            <p class="mt-3 text-sm text-slate-400">CGPA: 3.68 and Secured 2nd position among a cohort of 40 students</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2017-2018</p>
+            <h4 class="mt-2 text-xl font-semibold">Higher Secondary Certificate (HSC)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Katiadi Government College</p>
+            <p class="mt-3 text-sm text-slate-400">Katiadi, Kishoreganj</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2014-2015</p>
+            <h4 class="mt-2 text-xl font-semibold">Secondary School Certificate (SSC/ Dakhil)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Nur Hossaini Alim Madrasah Kumry</p>
+            <p class="mt-3 text-sm text-slate-400">Pakundiya, Kishoreganj</p>
+            <p class="mt-2 text-sm text-slate-400">Secured the highest marks among all students of the Madrasah in the Dakhil examination.</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2013</p>
+            <h4 class="mt-2 text-xl font-semibold">Junior Dakhil Certificate (JDC)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Nur Hossaini Alim Madrasah Kumry</p>
+            <p class="mt-3 text-sm text-slate-400">Pakundiya, Kishoreganj</p>
+            <p class="mt-2 text-sm text-slate-400">Achieved the highest marks in the Madrasah’s JDC examination.</p>
+          </article>
+          <article class="card card-hover reveal">
+            <p class="text-sm font-bold text-amber-400">2010</p>
+            <h4 class="mt-2 text-xl font-semibold">Secondary School Certificate (SSC/ Dakhil)</h4>
+            <p class="mt-2 text-sm font-semibold text-slate-200">Nur Hossaini Alim Madrasah Kumry</p>
+            <p class="mt-3 text-sm text-slate-400">Pakundiya, Kishoreganj</p>
+            <p class="mt-2 text-sm text-slate-400">Placed 3rd among all students in Pakundia Upazila.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS (PHOTOS) ================= -->
+    <section id="project-section" class="section border-t border-slate-900">
+      <div class="container-page">
+        <div class="section-title">
+          <span class="watermark" aria-hidden="true" data-text="Achievements"></span>
+          <h2>Achievements</h2>
+          <p>Below are some of my achievement certificates and memorable award-receiving moments.</p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/1st_Runner_up-1600.webp" data-lightbox="achievements" data-caption="Received the 1st Runner-Up Award in the Project Showcase Competition from the then Vice-Chancellor, Prof. Dr. Sumitro Shekhar." class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: 1st Runner-Up Award">
+              <img src="images/web/1st_Runner_up-800.webp" width="800" height="533" loading="lazy" decoding="async" alt="Receiving the 1st Runner-Up Award in the Project Showcase Competition" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Received the 1st Runner-Up Award in the Project Showcase Competition from the then Vice-Chancellor, Prof. Dr. Sumitro Shekhar.</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/Cuet_2-1600.webp" data-lightbox="achievements" data-caption="Received the ECIC-2025 Certificate at Chittagong University of Engineering &amp; Technology (CUET)." class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: ECIC-2025 Certificate at CUET">
+              <img src="images/web/Cuet_2-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Receiving the ECIC-2025 Certificate at CUET" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Received the ECIC-2025 Certificate at Chittagong University of Engineering &amp; Technology (CUET).</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/Robo_Race_e-1600.webp" data-lightbox="achievements" data-caption="Honored to receive the certificate for the International Robo Race Competition, presented by OnnoRokom Group and PiLabs." class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: International Robo Race Competition certificate">
+              <img src="images/web/Robo_Race_e-800.webp" width="800" height="360" loading="lazy" decoding="async" alt="Receiving the International Robo Race Competition certificate" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Honored to receive the certificate for the International Robo Race Competition, presented by OnnoRokom Group and PiLabs.</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/Harun_Vai_Crest-1600.webp" data-lightbox="achievements" data-caption="Farewell Program of the Inventor School Mymensingh" class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: Farewell Program of the Inventor School Mymensingh">
+              <img src="images/web/Harun_Vai_Crest-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="Farewell Program of the Inventor School Mymensingh" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Farewell Program of the Inventor School Mymensingh</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/RS-1600.webp" data-lightbox="achievements" data-caption="Honored to receive the certificate from The JKKNIU Research Society Advisor" class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: certificate from the JKKNIU Research Society Advisor">
+              <img src="images/web/RS-800.webp" width="800" height="533" loading="lazy" decoding="async" alt="Receiving a certificate from the JKKNIU Research Society Advisor" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Honored to receive the certificate from The JKKNIU Research Society Advisor</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/STCLP-1600.webp" data-lightbox="achievements" data-caption="Received an honorary gift from Honorable Tapos Kumar Sir on the occasion of International Mother’s Day 2023." class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: honorary gift on International Mother’s Day 2023">
+              <img src="images/web/STCLP-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Receiving an honorary gift on International Mother’s Day 2023" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Received an honorary gift from Honorable Tapos Kumar Sir on the occasion of International Mother’s Day 2023.</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/SV_Land-1600.webp" data-lightbox="achievements" data-caption="Special Gift from SI Saidur Rahman Vai" class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: Special Gift from SI Saidur Rahman Vai">
+              <img src="images/web/SV_Land-800.webp" width="800" height="447" loading="lazy" decoding="async" alt="Receiving a special gift from SI Saidur Rahman" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Special Gift from SI Saidur Rahman Vai</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/KUET-1600.webp" data-lightbox="achievements" data-caption="Participated in EEE Day at KUET" class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: EEE Day at KUET">
+              <img src="images/web/KUET-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Participating in EEE Day at KUET" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Participated in EEE Day at KUET</h3>
+          </article>
+
+          <article class="card card-hover reveal flex flex-col overflow-hidden p-0 sm:p-0">
+            <a href="images/web/Innovative-1600.webp" data-lightbox="achievements" data-caption="Hosted a Podcast with Innovative Society Bangladesh." class="group block aspect-[4/3] overflow-hidden bg-slate-800" aria-label="View larger photo: podcast with Innovative Society Bangladesh">
+              <img src="images/web/Innovative-800.webp" width="800" height="576" loading="lazy" decoding="async" alt="Hosting a podcast with Innovative Society Bangladesh" class="size-full object-cover transition duration-300 motion-safe:group-hover:scale-105">
+            </a>
+            <h3 class="p-5 text-base font-medium text-slate-100">Hosted a Podcast with Innovative Society Bangladesh.</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= COUNTERS + PERSONAL CTA ================= -->
+    <section id="section-counter" aria-label="Highlights">
+      <div class="container-page">
+        <dl class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div class="card reveal flex flex-col-reverse text-center">
+            <dt class="mt-1 text-sm text-slate-400">Achievements</dt>
+            <dd class="text-3xl font-bold text-amber-400 sm:text-4xl"><span data-count="20">20</span>+</dd>
+          </div>
+          <div class="card reveal flex flex-col-reverse text-center">
+            <dt class="mt-1 text-sm text-slate-400">Projects &amp; Publications</dt>
+            <dd class="text-3xl font-bold text-amber-400 sm:text-4xl"><span data-count="22">22</span>+</dd>
+          </div>
+          <div class="card reveal flex flex-col-reverse text-center">
+            <dt class="mt-1 text-sm text-slate-400">Mentored Students</dt>
+            <dd class="text-3xl font-bold text-amber-400 sm:text-4xl"><span data-count="12000">12,000</span>+</dd>
+          </div>
+          <div class="card reveal flex flex-col-reverse text-center">
+            <dt class="mt-1 text-sm text-slate-400">Conducted Seminars</dt>
+            <dd class="text-3xl font-bold text-amber-400 sm:text-4xl"><span data-count="40">40</span>+</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="relative isolate mt-16 overflow-hidden bg-[url('../images/web/bg_1-1920.webp')] bg-cover bg-center py-20 sm:py-28">
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-slate-950/70"></div>
+        <div class="container-page max-w-3xl text-center">
+          <h2 class="text-2xl font-bold sm:text-3xl lg:text-4xl">Learn more about me and my family by clicking <span class="text-amber-400">“Personal Information.”</span></h2>
+          <p class="mt-8"><a href="Personal.html" class="btn btn-primary px-8">Personal Information</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact-section" class="section">
+      <div class="container-page">
+        <div class="section-title">
+          <span class="watermark" aria-hidden="true" data-text="Contact"></span>
+          <h2>Contact Me</h2>
+          <p>Below are the details to reach out to me!</p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card reveal text-center">
+            <span class="mx-auto grid size-14 place-items-center rounded-full bg-amber-400/10 text-amber-400 ring-1 ring-amber-400/30">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-semibold">Address</h3>
+            <p class="mt-2">Pakundiya, Kishoreganj, Bangladesh</p>
+          </div>
+          <div class="card reveal text-center">
+            <span class="mx-auto grid size-14 place-items-center rounded-full bg-amber-400/10 text-amber-400 ring-1 ring-amber-400/30">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-semibold">Contact Number</h3>
+            <p class="mt-2"><a href="tel:+8801798619964" class="text-amber-300 hover:text-amber-200">+880&nbsp;1798&nbsp;619&nbsp;964</a></p>
+          </div>
+          <div class="card reveal text-center sm:col-span-2 lg:col-span-1">
+            <span class="mx-auto grid size-14 place-items-center rounded-full bg-amber-400/10 text-amber-400 ring-1 ring-amber-400/30">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-semibold">Email Address</h3>
+            <p class="mt-2"><a href="mailto:alamin.eee@aub.ac.bd" class="break-all text-amber-300 hover:text-amber-200">alamin.eee@aub.ac.bd</a></p>
+          </div>
+          <!--
+            "Download Resume" card: hidden until a resume file or URL is available.
+            To enable it, set the href below, uncomment this card and change
+            lg:grid-cols-3 on the grid above to lg:grid-cols-4.
+
+          <div class="card reveal text-center">
+            <span class="mx-auto grid size-14 place-items-center rounded-full bg-amber-400/10 text-amber-400 ring-1 ring-amber-400/30">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            </span>
+            <h3 class="mt-4 text-lg font-semibold">Download Resume</h3>
+            <p class="mt-2"><a href="RESUME-URL" class="text-amber-300 hover:text-amber-200">Resume (PDF)</a></p>
+          </div>
+          -->
+        </div>
+
+        <div class="mt-14 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center">
+          <h3 class="text-2xl font-bold">Have a <span class="font-normal text-amber-400">Question?</span></h3>
+          <a href="https://wa.me/8801798619964" target="_blank" rel="noopener" class="btn btn-primary px-8">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            WhatsApp Me
+          </a>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <span class="basis-full text-center text-sm text-slate-400 sm:mr-1 sm:basis-auto">Find me on</span>
+          <a href="https://www.youtube.com/watch?v=9Kdz1aheVsk&amp;list=PLwE-IGs-TC7fiGtqfMQxHCZTY86jAuH66" class="icon-btn" aria-label="YouTube">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alamin1910?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" class="icon-btn" aria-label="LinkedIn">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://twitter.com/md_alamin1910" class="icon-btn" aria-label="Twitter">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="https://facebook.com/alamin1910/" class="icon-btn" aria-label="Facebook">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alamin1910" class="icon-btn" aria-label="Instagram">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= NEXT PAGES ================= -->
+    <nav class="container-page grid gap-4 pb-16 sm:grid-cols-2" aria-label="More pages">
+      <a href="si.html" class="card card-hover group flex items-center justify-between gap-4 font-semibold text-slate-100 hover:text-amber-300">
+        <span>Future Technology: Super Intelligence (SI)</span>
+        <svg class="arrow-nudge size-5 shrink-0 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="Personal.html" class="card card-hover group flex items-center justify-between gap-4 font-semibold text-slate-100 hover:text-amber-300">
+        <span>Personal Information</span>
+        <svg class="arrow-nudge size-5 shrink-0 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </nav>
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-900 py-8 text-center text-sm text-slate-400">
+    <p>Copyright &copy; <span data-year>2026</span> Md. Al-Amin. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- ================= LIGHTBOX ================= -->
+  <dialog data-lightbox-dialog aria-label="Photo viewer" class="m-auto max-h-none w-full max-w-5xl bg-transparent p-4 text-slate-100 backdrop:bg-slate-950/90">
+    <button type="button" data-lightbox-close class="icon-btn absolute top-2 right-2 z-10 bg-slate-950/80" aria-label="Close">
+      <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <figure>
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="mx-auto max-h-[78vh] w-auto rounded-xl object-contain">
+      <figcaption class="mx-auto mt-4 max-w-2xl text-center text-sm text-slate-300"></figcaption>
+    </figure>
+    <div class="mt-4 flex items-center justify-center gap-4">
+      <button type="button" data-lightbox-prev class="icon-btn" aria-label="Previous photo">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <span data-lightbox-counter class="min-w-12 text-center text-xs text-slate-400"></span>
+      <button type="button" data-lightbox-next class="icon-btn" aria-label="Next photo">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <script src="js/science-bg.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

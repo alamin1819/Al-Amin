@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI থেকে Super Intelligence | Md. Al-Amin</title>
+  <meta name="description" content="AI, AGI এবং ASI: মানুষ, মেশিন এবং ভবিষ্যৎ পৃথিবীর গল্প। লিখেছেন মোঃ আল-আমিন, প্রভাষক-সিএসই (এইউবি)।">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="font-bengali">
+  <!-- Site-wide scientific background (decorative, behind all content) -->
+  <div class="science-bg" data-science-bg aria-hidden="true">
+    <div class="science-bg-nebula science-bg-nebula-a"></div>
+    <div class="science-bg-nebula science-bg-nebula-b"></div>
+    <canvas data-science-scene></canvas>
+  </div>
+
+  <!-- Reading progress -->
+  <div aria-hidden="true" class="fixed inset-x-0 top-0 z-[60] h-1 origin-left scale-x-0 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-200" data-progress></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-nav sticky top-0 z-50" data-nav data-nav-solid data-nav-breakpoint="768">
+    <nav class="container-page relative flex h-16 items-center justify-between font-sans" aria-label="Article sections">
+      <a href="si.html" class="text-xl font-extrabold tracking-wide text-amber-400">
+        AI <span class="text-white">→</span> SI
+      </a>
+
+      <button type="button" class="btn btn-outline min-h-10 px-3 md:hidden" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
+        <svg data-icon-open class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg data-icon-close class="hidden size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <ul id="nav-menu" class="absolute inset-x-0 top-full hidden flex-col gap-1 rounded-b-2xl border border-t-0 border-slate-800 bg-slate-950/95 p-3 shadow-xl backdrop-blur-md md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none" data-nav-menu>
+        <li><a href="#what" class="nav-link">What is SI?</a></li>
+        <li><a href="#levels" class="nav-link">AI → AGI → ASI</a></li>
+        <li><a href="#race" class="nav-link">Global Race</a></li>
+        <li><a href="#risk" class="nav-link">Risks</a></li>
+        <li><a href="#bangladesh" class="nav-link">Bangladesh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <section class="relative isolate overflow-hidden" aria-label="Introduction">
+    <div aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 size-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-400/10 blur-3xl"></div>
+
+    <div class="container-page flex min-h-[70svh] max-w-4xl flex-col items-center justify-center py-16 text-center sm:min-h-[80svh]">
+      <p class="inline-block rounded-full border border-amber-400/40 bg-amber-400/5 px-4 py-1.5 font-sans text-xs font-semibold tracking-widest text-amber-400">
+        THE NEXT TECHNOLOGICAL FRONTIER
+      </p>
+
+      <h1 class="mt-6 bg-gradient-to-r from-amber-100 via-amber-400 to-amber-500 bg-clip-text text-4xl leading-tight font-bold text-transparent sm:text-6xl lg:text-7xl">
+        AI থেকে Super Intelligence
+        <span class="mt-4 block text-xl font-semibold text-slate-100 sm:text-2xl lg:text-3xl">
+          মানুষ, মেশিন এবং ভবিষ্যৎ পৃথিবীর গল্প
+        </span>
+      </h1>
+      <p class="mt-4 self-end text-xs text-slate-400 sm:text-sm">মোঃ আল-আমিন, প্রভাষক-সিএসই (এইউবি)</p>
+
+      <div aria-hidden="true" class="my-8 h-0.5 w-24 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+
+      <p class="max-w-2xl text-lg leading-8 text-slate-300">
+        Artificial Intelligence-এর পরবর্তী ধাপ কি
+        Artificial Superintelligence?
+        যদি সত্যিই আসে, তাহলে মানুষ কোথায় দাঁড়াবে?
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= ARTICLE ================= -->
+  <main class="container-page prose-article max-w-3xl pb-16">
+
+    <!-- SECTION 01 -->
+    <section class="reveal" id="what">
+      <p class="article-kicker">01 — The Beginning</p>
+      <h2>আমরা এখন কোন যুগে আছি?</h2>
+
+      <p>
+        মাত্র কয়েক বছর আগেও Artificial Intelligence বা
+        <span class="gold">AI</span> ছিল মূলত গবেষণাগার,
+        বিশ্ববিদ্যালয় এবং বড় প্রযুক্তি প্রতিষ্ঠানের বিষয়।
+        আজ সেই AI আমাদের মোবাইল ফোন, কম্পিউটার,
+        গাড়ি, হাসপাতাল, শিক্ষা এমনকি দৈনন্দিন জীবনের
+        অংশ হয়ে গেছে।
+      </p>
+      <p>
+        ChatGPT-এর মতো Generative AI দেখিয়ে দিয়েছে,
+        একটি মেশিন শুধু হিসাব করতে পারে না—
+        এটি লেখা লিখতে পারে, কোড তৈরি করতে পারে,
+        ছবি বিশ্লেষণ করতে পারে, ভাষা অনুবাদ করতে পারে
+        এবং জটিল সমস্যার সমাধান করার চেষ্টা করতে পারে।
+      </p>
+      <p>
+        কিন্তু এখানেই গল্প শেষ নয়।
+        প্রযুক্তিবিদ ও গবেষকদের একটি অংশ মনে করেন,
+        আমরা হয়তো এমন এক AI-এর দিকে এগিয়ে যাচ্ছি
+        যাকে বলা হয়—
+      </p>
+
+      <div class="statement">
+        <h2>Artificial Superintelligence</h2>
+        <p>
+          সংক্ষেপে <strong>ASI</strong>।
+          অর্থাৎ এমন কৃত্রিম বুদ্ধিমত্তা,
+          যা মানুষের প্রায় সব ধরনের বুদ্ধিবৃত্তিক
+          কাজের ক্ষেত্রে সবচেয়ে মেধাবী মানুষকেও
+          ছাড়িয়ে যেতে পারে।
+        </p>
+      </div>
+    </section>
+
+
+    <!-- SECTION 02 -->
+    <section class="reveal" id="levels">
+      <p class="article-kicker">02 — AI → AGI → ASI</p>
+      <h2>AI, AGI এবং ASI—পার্থক্যটা কী?</h2>
+
+      <p>
+        এই তিনটি শব্দ প্রায়ই একসঙ্গে ব্যবহার করা হয়।
+        কিন্তু এগুলো একই জিনিস নয়।
+      </p>
+
+      <ol class="my-8 divide-y divide-slate-800 border-y border-slate-800">
+        <li class="grid gap-2 py-6 sm:grid-cols-[6rem_1fr] sm:gap-6">
+          <span class="font-sans text-sm font-extrabold tracking-wider text-amber-400">STEP 01</span>
+          <div>
+            <h3 class="!mt-0">Artificial Intelligence — AI</h3>
+            <p class="!mb-0">
+              নির্দিষ্ট কাজ করার জন্য তৈরি AI।
+              যেমন image recognition, recommendation,
+              translation, speech recognition বা
+              একটি নির্দিষ্ট ধরনের problem solving।
+            </p>
+          </div>
+        </li>
+        <li class="grid gap-2 py-6 sm:grid-cols-[6rem_1fr] sm:gap-6">
+          <span class="font-sans text-sm font-extrabold tracking-wider text-amber-400">STEP 02</span>
+          <div>
+            <h3 class="!mt-0">Artificial General Intelligence — AGI</h3>
+            <p class="!mb-0">
+              এমন AI যা মানুষের মতো বিভিন্ন ধরনের
+              intellectual task শিখতে ও সম্পাদন করতে
+              পারবে—শুধু একটি নির্দিষ্ট কাজ নয়।
+            </p>
+          </div>
+        </li>
+        <li class="grid gap-2 py-6 sm:grid-cols-[6rem_1fr] sm:gap-6">
+          <span class="font-sans text-sm font-extrabold tracking-wider text-amber-400">STEP 03</span>
+          <div>
+            <h3 class="!mt-0">Artificial Superintelligence — ASI</h3>
+            <p class="!mb-0">
+              hypothetical এমন intelligence যা
+              reasoning, research, creativity,
+              science, planning এবং problem solving-এর
+              মতো প্রায় সব গুরুত্বপূর্ণ ক্ষেত্রে
+              মানুষের সেরা সক্ষমতাকেও ছাড়িয়ে যেতে পারে।
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="english-box" lang="en">
+        <p class="english-label">IN SIMPLE ENGLISH</p>
+        <p>
+          AI is designed to perform specific or bounded tasks.
+          AGI would be capable of general-purpose intellectual
+          work across many domains. ASI would go beyond human
+          intelligence across most or nearly all cognitive domains.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- SECTION 03 -->
+    <section class="reveal">
+      <p class="article-kicker">03 — How Could ASI Work?</p>
+      <h2>Super Intelligence কীভাবে কাজ করতে পারে?</h2>
+
+      <p>
+        এখানে সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো—
+        ASI এখনো বাস্তবে প্রতিষ্ঠিত কোনো technology নয়।
+        এটি একটি ভবিষ্যৎ ধারণা বা hypothetical intelligence।
+      </p>
+      <p>
+        তবে বর্তমান AI research-এর ধারাবাহিকতা ধরে
+        চিন্তা করলে সম্ভাব্য একটি কাঠামো কল্পনা করা যায়।
+      </p>
+
+      <div class="my-8 grid gap-4 sm:grid-cols-2">
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🧠</div>
+          <h3>Advanced Reasoning</h3>
+          <p>জটিল mathematical, scientific এবং logical সমস্যাকে মানুষের চেয়ে অনেক দ্রুত বিশ্লেষণ করার সক্ষমতা।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">📚</div>
+          <h3>Massive Knowledge</h3>
+          <p>বিপুল পরিমাণ scientific literature, code, data এবং অন্যান্য information একসঙ্গে বিশ্লেষণ করতে পারা।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🔄</div>
+          <h3>Continuous Learning</h3>
+          <p>নতুন information থেকে দ্রুত শিখে নিজের problem-solving capability উন্নত করার সম্ভাবনা।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">⚡</div>
+          <h3>Machine Speed</h3>
+          <p>মানুষের চিন্তার সময়ের তুলনায় অনেক দ্রুত computation ও information processing।</p>
+        </div>
+      </div>
+
+      <p>
+        যদি ভবিষ্যতের AI নিজেই নতুন algorithm তৈরি,
+        scientific hypothesis তৈরি এবং সেই hypothesis
+        পরীক্ষা করার মতো capability অর্জন করে, তাহলে
+        technological progress-এর গতি বর্তমানের তুলনায়
+        অনেক বেড়ে যেতে পারে।
+      </p>
+    </section>
+
+
+    <!-- SECTION 04 -->
+    <section class="reveal">
+      <p class="article-kicker">04 — AI Meets The Real World</p>
+      <h2>আসল পরিবর্তন হবে যখন AI-এর সঙ্গে Robot যুক্ত হবে</h2>
+
+      <p>
+        একটি AI যদি শুধু computer screen-এর ভেতরে থাকে,
+        তার ক্ষমতা মূলত digital world-এর মধ্যে সীমাবদ্ধ।
+      </p>
+      <p>
+        কিন্তু AI-এর সঙ্গে যদি physical systems যুক্ত হয়,
+        তখন পরিস্থিতি সম্পূর্ণ ভিন্ন হতে পারে।
+      </p>
+
+      <div class="my-8 grid gap-4 sm:grid-cols-2">
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🤖</div>
+          <h3>AI + Robotics</h3>
+          <p>Manufacturing, logistics, agriculture, household work এবং অন্যান্য physical task automation।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🚗</div>
+          <h3>AI + Autonomous Vehicles</h3>
+          <p>মানুষের সরাসরি নিয়ন্ত্রণ ছাড়াই vehicle navigation এবং decision making।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">💻</div>
+          <h3>AI + Computer Systems</h3>
+          <p>Software, cloud infrastructure, financial systems এবং information networks পরিচালনার সক্ষমতা।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🏭</div>
+          <h3>AI + Industry</h3>
+          <p>Factory, energy system, supply chain এবং large-scale industrial processes-এর automation।</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p class="callout-title">⚠️ এখানেই মূল প্রশ্ন: Control</p>
+        <p>
+          অত্যন্ত শক্তিশালী AI যদি গুরুত্বপূর্ণ
+          physical এবং digital infrastructure-এর ওপর
+          অতিরিক্ত autonomy পায়, তাহলে ভুল সিদ্ধান্ত,
+          misuse অথবা unexpected behaviour-এর প্রভাব
+          অনেক বড় হতে পারে।
+        </p>
+      </div>
+    </section>
+
+
+    <!-- SECTION 05 -->
+    <section class="reveal" id="race">
+      <p class="article-kicker">05 — The Global AI Race</p>
+      <h2>কে এগিয়ে? America, China, Europe, Japan— পৃথিবী কোথায় যাচ্ছে?</h2>
+
+      <p>
+        AI development এখন শুধু technology competition নয়।
+        এটি economic power, scientific leadership,
+        national security এবং geopolitical influence-এর
+        সঙ্গেও যুক্ত হয়ে গেছে।
+      </p>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <div class="card">
+          <h3>🇺🇸 United States</h3>
+          <p>Frontier AI research, advanced computing, semiconductor ecosystem, cloud infrastructure এবং বড় technology companies-এর কারণে United States বর্তমানে AI development-এর অন্যতম প্রধান কেন্দ্র।</p>
+        </div>
+        <div class="card">
+          <h3>🇨🇳 China</h3>
+          <p>China large-scale AI deployment, research, robotics, computer vision, autonomous systems এবং domestic technology ecosystem-এ ব্যাপক বিনিয়োগ করছে।</p>
+        </div>
+        <div class="card">
+          <h3>🇬🇧 United Kingdom</h3>
+          <p>UK-এর শক্তিশালী university research, AI safety research এবং international AI policy discussion-এ গুরুত্বপূর্ণ ভূমিকা রয়েছে।</p>
+        </div>
+        <div class="card">
+          <h3>🇩🇪 Germany</h3>
+          <p>Germany বিশেষ করে industrial AI, manufacturing, automation, robotics এবং European research ecosystem-এর গুরুত্বপূর্ণ অংশ।</p>
+        </div>
+        <div class="card">
+          <h3>🇯🇵 Japan</h3>
+          <p>Japan robotics, automation, manufacturing এবং human-machine interaction-এর ক্ষেত্রে দীর্ঘদিনের expertise কাজে লাগিয়ে AI ecosystem শক্তিশালী করছে।</p>
+        </div>
+        <div class="card">
+          <h3>🇪🇺 Europe</h3>
+          <p>Europe frontier AI-এর পাশাপাশি regulation, safety, privacy এবং responsible AI development নিয়েও বিশেষ গুরুত্ব দিচ্ছে।</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 06 -->
+    <section class="reveal">
+      <p class="article-kicker">06 — Why Are Countries Competing?</p>
+      <h2>AI race এত গুরুত্বপূর্ণ কেন?</h2>
+
+      <p>
+        কারণ AI শুধু একটি software technology নয়।
+        এটি আগামী দিনের economy-এর infrastructure হয়ে
+        উঠতে পারে।
+      </p>
+
+      <div class="my-8 grid gap-4 sm:grid-cols-2">
+        <div class="card card-hover">
+          <h3>💰 Economy</h3>
+          <p>উৎপাদনশীলতা বৃদ্ধি, automation এবং নতুন business model তৈরি করতে AI গুরুত্বপূর্ণ ভূমিকা রাখতে পারে।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>🔬 Science</h3>
+          <p>Drug discovery, materials science, climate modelling এবং physics research দ্রুততর হতে পারে।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>🛡️ Security</h3>
+          <p>Cybersecurity, intelligence এবং autonomous systems-এর ক্ষেত্রে AI-এর ভূমিকা বাড়ছে।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>🏛️ Geopolitics</h3>
+          <p>AI leadership ভবিষ্যতে technology standard, economic influence এবং geopolitical power-এর ওপর প্রভাব ফেলতে পারে।</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 07 -->
+    <section class="reveal" id="risk">
+      <p class="article-kicker">07 — The Risk</p>
+      <h2>Super Intelligence-এর সবচেয়ে বড় ভয় কোথায়?</h2>
+
+      <p>
+        ASI নিয়ে আলোচনা করতে গিয়ে সবচেয়ে গুরুত্বপূর্ণ
+        শব্দগুলোর একটি হলো—
+      </p>
+
+      <div class="statement">
+        <h2>Alignment</h2>
+        <p>
+          অর্থাৎ AI-এর লক্ষ্য, সিদ্ধান্ত এবং behaviour
+          যেন মানুষের উদ্দেশ্য ও নিরাপত্তার সঙ্গে
+          সামঞ্জস্যপূর্ণ থাকে।
+        </p>
+      </div>
+
+      <p>
+        একটি অত্যন্ত intelligent system যদি এমন কোনো
+        objective অনুসরণ করে যা মানুষের উদ্দেশ্যের সঙ্গে
+        পুরোপুরি সামঞ্জস্যপূর্ণ নয়, তাহলে তার intelligence
+        যত বাড়বে, সেই mismatch-এর consequences-ও বড় হতে পারে।
+      </p>
+
+      <div class="callout">
+        <p class="callout-title">AI Safety কেন গুরুত্বপূর্ণ?</p>
+        <p>
+          AI capability যত দ্রুত বাড়বে, একই সঙ্গে
+          safety, evaluation, monitoring, interpretability,
+          alignment এবং governance-এর research-ও গুরুত্বপূর্ণ
+          হয়ে উঠবে।
+        </p>
+      </div>
+
+      <h3>একটি গুরুত্বপূর্ণ বিষয়</h3>
+      <p>
+        তবে এখানে বাস্তবতা পরিষ্কার রাখা জরুরি:
+        <strong>আজকের AI-কে ASI বলা যায় না।</strong>
+        ASI কবে আসবে—এটি নিয়ে গবেষক ও প্রযুক্তিবিদদের
+        মধ্যে কোনো নির্দিষ্ট consensus নেই।
+      </p>
+      <p>
+        কেউ দ্রুত অগ্রগতির সম্ভাবনা দেখছেন,
+        আবার কেউ মনে করেন human-level বা superhuman
+        general intelligence অর্জন করতে অনেক বেশি সময়
+        লাগতে পারে।
+      </p>
+    </section>
+
+
+    <!-- SECTION 08 -->
+    <section class="reveal">
+      <p class="article-kicker">08 — The Future of Work</p>
+      <h2>তাহলে মানুষের কাজ কী হবে?</h2>
+
+      <p>
+        AI-এর সবচেয়ে বড় প্রভাব সম্ভবত শুধু চাকরি হারানো নয়।
+        বরং <span class="gold">কাজের প্রকৃতিই পরিবর্তিত হবে।</span>
+      </p>
+      <p>
+        যেসব কাজ repetitive, predictable এবং easily
+        automatable—সেগুলোর ওপর AI-এর প্রভাব সবচেয়ে বেশি
+        হতে পারে।
+      </p>
+
+      <div class="my-8 grid gap-4 sm:grid-cols-2">
+        <div class="card card-hover">
+          <h3>❌ Repetitive Work</h3>
+          <p>Data entry, basic formatting, routine analysis, repetitive administrative work ইত্যাদি।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>⚙️ AI-Assisted Work</h3>
+          <p>শিক্ষক, engineer, researcher, designer, programmer—অনেক পেশায় AI সহকারী হিসেবে কাজ করতে পারে।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>🧠 Human Advantage</h3>
+          <p>Judgment, leadership, communication, empathy, responsibility এবং real-world decision making গুরুত্বপূর্ণ থাকতে পারে।</p>
+        </div>
+        <div class="card card-hover">
+          <h3>🚀 New Skills</h3>
+          <p>AI literacy, critical thinking, problem solving, interdisciplinary knowledge এবং continuous learning আরও গুরুত্বপূর্ণ হতে পারে।</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 09 -->
+    <section class="reveal">
+      <p class="article-kicker">09 — What About Certificates?</p>
+      <h2>তাহলে কি Academic Certificate-এর মূল্য শেষ?</h2>
+
+      <p>এই প্রশ্নের উত্তর এত সহজ নয়।</p>
+      <p>
+        Certificate হয়তো ভবিষ্যতেও গুরুত্বপূর্ণ থাকবে—
+        বিশেষ করে regulated profession, higher education,
+        professional qualification এবং formal verification-এর
+        ক্ষেত্রে।
+      </p>
+      <p>
+        কিন্তু শুধু একটি certificate দেখিয়ে
+        <strong>“আমি এই কাজটি করতে পারি”</strong>
+        —এই ধারণাটি ভবিষ্যতে দুর্বল হতে পারে।
+      </p>
+      <p>
+        কারণ AI এমন কিছু কাজ করতে পারবে,
+        যেগুলো করতে আগে বহু বছর training প্রয়োজন ছিল।
+      </p>
+
+      <blockquote class="quote" lang="en">
+        <p>
+          “Future advantage may come less from what
+          you have memorized, and more from what
+          you can understand, create and adapt to.”
+        </p>
+        <span>— A way to think about the AI era</span>
+      </blockquote>
+
+      <p>
+        তাই education-এর লক্ষ্য শুধু certificate অর্জন নয়।
+        বরং <span class="gold">শেখার ক্ষমতা তৈরি করা</span>।
+      </p>
+    </section>
+
+
+    <!-- SECTION 10 -->
+    <section class="reveal" id="bangladesh">
+      <p class="article-kicker">10 — Bangladesh</p>
+      <h2>আমরা কোথায় দাঁড়িয়ে আছি?</h2>
+
+      <p>
+        এখন সবচেয়ে গুরুত্বপূর্ণ প্রশ্ন—
+        এই পরিবর্তনের মধ্যে Bangladesh-এর অবস্থান কোথায়?
+      </p>
+      <p>
+        আমাদের সামনে বড় সুযোগ যেমন আছে,
+        তেমনি বড় challenge-ও আছে।
+      </p>
+
+      <div class="my-8 grid gap-4 sm:grid-cols-2">
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🎓</div>
+          <h3>Education</h3>
+          <p>মুখস্থনির্ভর শিক্ষা থেকে problem solving, creativity, research এবং practical skill-এর দিকে আরও বেশি গুরুত্ব দিতে হবে।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">💻</div>
+          <h3>Digital Skills</h3>
+          <p>AI tools ব্যবহার, programming, data analysis এবং digital literacy ভবিষ্যতের workforce-এর গুরুত্বপূর্ণ অংশ হতে পারে।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🔬</div>
+          <h3>Research</h3>
+          <p>AI শুধু ব্যবহার নয়—নিজস্ব research capability তৈরি করা প্রয়োজন।</p>
+        </div>
+        <div class="card card-hover">
+          <div class="mb-2 text-3xl" aria-hidden="true">🌱</div>
+          <h3>Local Problems</h3>
+          <p>Agriculture, healthcare, education, traffic, disaster management এবং climate-এর মতো স্থানীয় সমস্যায় AI প্রয়োগ করা যেতে পারে।</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 11 -->
+    <section class="reveal">
+      <p class="article-kicker">11 — The Real Challenge</p>
+      <h2>ভবিষ্যতে সবচেয়ে গুরুত্বপূর্ণ skill কোনটি?</h2>
+
+      <p>
+        সম্ভবত একটি নির্দিষ্ট skill নয়।
+        বরং <strong>শিখতে থাকার ক্ষমতা।</strong>
+      </p>
+      <p>
+        কারণ AI technology দ্রুত পরিবর্তিত হচ্ছে।
+        আজ যে tool সবচেয়ে powerful,
+        কয়েক বছর পরে সেটিই হয়তো পুরনো হয়ে যাবে।
+      </p>
+      <p>
+        তাই ভবিষ্যতের মানুষকে হয়তো বারবার
+        নতুন করে শিখতে হবে—
+        নতুন tools, নতুন technology,
+        নতুন চিন্তার পদ্ধতি এবং নতুন কাজের ধরন।
+      </p>
+
+      <div class="statement">
+        <h2>Stay Relevant.</h2>
+        <p>
+          ভবিষ্যতের পৃথিবীতে সবচেয়ে বড় advantage
+          হয়তো হবে—পরিবর্তনের সঙ্গে দ্রুত মানিয়ে নেওয়া।
+        </p>
+      </div>
+    </section>
+
+
+    <!-- SECTION 12 -->
+    <section class="reveal">
+      <p class="article-kicker">12 — Final Thought</p>
+      <h2>আমরা কি ভয় পাব, নাকি প্রস্তুত হব?</h2>
+
+      <p>
+        AI নিয়ে ভয় পাওয়ার যথেষ্ট কারণ আছে।
+        কিন্তু ভয় পেয়ে technology থেকে দূরে সরে যাওয়া
+        কোনো সমাধান নয়।
+      </p>
+      <p>
+        একই technology একদিকে মানুষের কাজ automate করতে পারে,
+        অন্যদিকে নতুন scientific discovery, medical treatment,
+        education এবং environmental solution-এর পথও খুলে দিতে পারে।
+      </p>
+      <p>
+        তাই আসল প্রশ্ন শুধু—
+        <span class="gold">“AI কতটা intelligent হবে?”</span>
+        —এটা নয়।
+      </p>
+      <p>
+        আসল প্রশ্ন হলো—
+        <strong>“আমরা সেই intelligence-কে কীভাবে ব্যবহার করব?”</strong>
+      </p>
+
+      <blockquote class="quote">
+        <p>
+          AI-এর ভবিষ্যৎ শুধু machine-এর হাতে নয়;
+          এটি মানুষের সিদ্ধান্ত, নীতি, শিক্ষা এবং
+          দায়িত্বশীলতার ওপরও নির্ভর করবে।
+        </p>
+        <span lang="en">
+          The future is not only about smarter machines —
+          it is also about wiser humans.
+        </span>
+      </blockquote>
+
+      <div class="english-box" lang="en">
+        <p class="english-label">FINAL THOUGHT</p>
+        <p>
+          Artificial Superintelligence is still a hypothetical
+          concept, not an established reality. But the rapid
+          progress of AI makes it increasingly important to
+          understand both its potential and its risks.
+          The goal should not simply be to build more powerful
+          machines. We must also build better safety systems,
+          stronger institutions, responsible policies and a
+          society capable of adapting to technological change.
+        </p>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ================= PREVIOUS PAGE ================= -->
+  <div class="container-page flex justify-center pb-16 font-sans">
+    <a href="index.html" class="btn btn-outline group px-8">
+      Previous
+      <svg class="arrow-nudge size-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-900 px-4 py-12 text-center font-sans" lang="en">
+    <h2 class="text-lg font-bold text-amber-400">AI <span class="arrow-nudge mr-1.5 inline-block">→</span> AGI <span class="arrow-nudge mr-1.5 inline-block">→</span> ASI</h2>
+    <div aria-hidden="true" class="mx-auto my-4 h-0.5 w-16 bg-amber-400"></div>
+    <p class="text-sm text-slate-400">Understanding the technology before it changes the world.</p>
+    <p class="mt-2 text-sm text-slate-400">© 2026 — Future of Intelligence</p>
+  </footer>
+
+
+  <!-- Back to top -->
+  <button type="button" data-to-top class="icon-btn fixed right-4 bottom-4 z-40 hidden bg-slate-900 text-amber-400 shadow-lg sm:right-6 sm:bottom-6" aria-label="Back to top">
+    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/science-bg.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
